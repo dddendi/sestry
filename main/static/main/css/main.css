@@ -1,3 +1,172 @@
-body{
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    background-color: transparent;
+    vertical-align: top;
+}
+
+html,body{
+    width: 100vw;
+    min-height: 100vh; /* на айфонах будет баг*/
     background: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-header{
+    width: 100%;
+
+    
+}
+.main-header-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #cdd290;
+}
+.main-header-nav{
+    height: 57px;
+    background-color: #D8C48F;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.main-header-nav > ul{
+    display: inline;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+main{
+    flex-grow: 1;
+}
+
+.main-header-nav > ul > li{
+    display: inline-block;
+}
+.main-header-nav > ul > li:not(:last-child)::after{
+    content: "|";
+}
+
+
+.main-header-nav > ul > li > a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: -0.035em;
+}
+.main-footer{
+    overflow: hidden;
+    background-color: #D8C48F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-wrapper{
+    overflow: hidden;
+    display: flex;
+    max-width: 1000px;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.footer-wrapper > .footer-block{
+    padding-top: 10px;
+
+}
+
+.footer-wrapper > .footer-block:not(:first-child){
+    padding-left: 10px;
+    
+}
+.footer-wrapper > .footer-block:first-child{
+    display: flex;
+    flex-direction: row;
+    
+}
+.footer-block > .footer-number {
+    display: flex;
+    flex-direction: column;
+}
+.footer-block > .footer-address {
+width: 210px;
+}
+.gallery {
+    margin-top: 15px;
+    width: 100%;
+    height: 250px;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.gallery > .gallery-photo{
+    width: 50%;
+    background-color: gray;
+}
+
+.gallery > .gallery-postcards{
+    width: 50%;
+    background-color: gray;
+}
+.main-page{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-page-wrapper{
+    overflow: hidden;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.holidays{
+    margin-top: 15px;
+    width: 100%;
+    height: 250px;
+    background-color: gray;
+}
+.more-2{
+    margin-top: 15px;
+    width: 100%;
+    height: 100px;
+}
+.more-2-block{
+    border:  2px solid #A2B0EB;
+    width: 100%;
+    background-color: aliceblue;
+}
+.more{
+    width: 100%;
+    height: 250px;
+    gap: 10px;
+    margin-top: 15px;
+}
+.more > .more-news{
+    width: 40%;
+}
+
+.more > .more-calendar{
+    width: 60%;
+}
+
+.more > .more-block{
+    background-color: gray;
 }
