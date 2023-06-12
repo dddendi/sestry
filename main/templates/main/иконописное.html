@@ -1,0 +1,208 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Иконописное послушание {% endblock %}
+{% block header %}<link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+{% endblock %}
+{% block content %}
+        <section class="intro">
+            <div class="container intro__container">
+                <h1 class="intro__title">
+                    Иконописное послушание
+                </h1>
+                <ul class="intro__list-images list-images flex">
+                    <li class="list-images__item">
+                        <img src="{% static 'img/assets/image 54.jpg' %}" alt="" class="list_images__image">
+                    </li>
+                    <li class="list-images__item">
+                        <img src="{% static 'img/assets/image 55.jpg' %}" alt="" class="list_images__image">
+                    </li>
+                </ul>
+                <button class="intro__button btn">
+                    <!-- TODO: форма заказа иконы и переделать кнопку на ссылку -->
+                    Заказать икону через форму
+                </button>
+                <div class="intro__descr">
+                    <p>
+                        До революции в иконописной мастерской Ново-Тихвинского женского монастыря проходило послушание
+                        около ста сестер. Иконы, написанные насельницами обители, а также выполненные их руками
+                        миниатюры и расписные сувениры пользовались широкой известностью, некоторые из них были
+                        преподнесены в дар членам Императорской Фамилии.
+                    </p>
+                    <p>
+                        Ныне монастырь возрождается; по благословению духовника обители схиархимандрита Авраама
+                        возобновлена и иконописная мастерская. Сейчас на этом послушании трудится тринадцать сестер.
+                    </p>
+                    <p>
+                        Основным направлением мастерской изначально является возрождение канонической иконописи. В своем
+                        выборе сестры исходили из того, что икона канонического письма более других способствует
+                        созданию молитвенного настроя. Это заложено в самом способе канонического изображения – глубоко
+                        символичном. Высшая красота не может быть адекватно передана с помощью обычных художественных
+                        средств, поэтому необходимо прибегать к символике, выработанной Церковью на протяжении веков.
+                        Когда мы смотрим на икону канонического письма, где каждая деталь имеет некий духовный смысл,
+                        то, даже не зная точного значения всех символов, мы проникаемся ощущением того, что изображенные
+                        Лица и События – "не от мира сего". Конечно, это происходит только тогда, когда иконы написаны с
+                        точным соблюдением всех канонов и при этом проникнуты живым чувством. Сестры избрали образцом
+                        для подражания византийские иконы XIII–XIV веков (Палеологовского периода), в которых в полной
+                        мере имеется и строгая каноничность, и возвышенная эмоциональность.
+                    </p>
+                    <p>
+                        Сестры стремятся соблюдать не только древние каноны иконописи, но и старинные технологии
+                        изготовления икон. Иконные доски изготавливаются из дерева, сушившегося в течение нескольких лет
+                        естественным путем. Для грунта под живопись используются натуральные клеи животного
+                        происхождения. Краски делаются на основе яичной эмульсии из перетертых вручную минералов.
+                        Например, для получения всех оттенков синего цвета используется лазурит, который применялся
+                        мастерами с древних времен. Красная краска — это киноварь, желтая — аурипигмент, зеленая —
+                        малахит, глауконит и т. д.
+                    </p>
+                    <p>
+                        Прежде чем написать образ какого-нибудь святого, или Спасителя, или Божией Матери, сестры просят
+                        молитвенной помощи в этом деле, стараются прочитать житие того угодника Божия, которого
+                        изображают. По словам иконописцев, иногда им даже бывает немного страшно приступать к работе,
+                        они испытывают особое благоговение, потому что знают, что люди будут смотреть на эту икону и,
+                        созерцая ее, умом будут возвышаться к Богу.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="icons">
+            <div class="container icons__countainer">
+                <h2 class="icons__title">
+                    Иконы
+                </h2>
+                <ul class="icons__list list-icons">
+                    <li class="icon list-icons__item">
+                        <div class="icon__main-image_block">
+                            <img src="{% static 'img/assets/image 56.jpg' %}" alt="" class="icon__main-image">
+                        </div>
+                        <div class="icon__text">
+                            <h3 class="icon__title">
+                                Иконы Святой Троицы
+                            </h3>
+                            <p class="icon_descr">
+                                Святую Троицу с глубокой древности изображают в образе трех ангелов – так, каким было
+                                чудесное явление праведному Аврааму при дубе Мамврийском. Иконы Святой Троицы часто
+                                пишут для храмов, но также такие иконы стараются иметь в своем доме и многие
+                                благочестивые христиане.
+                            </p>
+                        </div>
+                        <div class="icon__other-images">
+                            <img src="{% static 'img/assets/image 62.jpg' %}" alt="" class="icon__image">
+                            <img src="{% static 'img/assets/image 63.jpg' %}" alt="" class="icon__image">
+                        </div>
+                    </li>
+                    <li class="icon list-icons__item">
+                        <div class="icon__main-image_block">
+                            <img src="{% static 'img/assets/image 57.jpg' %}" alt="" class="icon__main-image">
+                        </div>
+                        <div class="icon__text">
+                            <h3 class="icon__title">
+                                Иконы Спасителя
+                            </h3>
+                            <p class="icon_descr">
+                                Икона Господа Иисуса Христа – главный образ и в иконостасе любого храма, и в красном
+                                углу любого дома. Самой разной может быть их иконография: Спас в силах, Пантократор,
+                                Спас на престоле, оплечные иконы, Спас на убрусе… Но на каждой иконе кроткий, любящий,
+                                величественный лик Господа, нашего Творца и Спасителя
+                            </p>
+                        </div>
+                        <div class="icon__other-images">
+                            <img src="{% static 'img/assets/image 64.jpg' %}" alt="" class="icon__image">
+                            <img src="{% static 'img/assets/image 65.jpg' %}" alt="" class="icon__image">
+                            <img src="{% static 'img/assets/image 66.jpg' %}" alt="" class="icon__image">
+                        </div>
+                    </li>
+                    <li class="icon list-icons__item">
+                        <div class="icon__main-image_block">
+                            <img src="{% static 'img/assets/image 58.jpg' %}" alt="" class="icon__main-image">
+                        </div>
+                        <div class="icon__text">
+                            <h3 class="icon__title">
+                                Иконы Божией Матери
+                            </h3>
+                            <p class="icon_descr">
+                                Богородица – милосердная Мать всех христиан, и каждый православный дом освящается
+                                изображением различных Ее образов. С рождения и до смерти сопутствует человеку образ
+                                кроткой
+                                нашей Владычицы: крестят ли ребенка, благословляют ли молодых на брак, строят ли дом,
+                                провожают ли в последний путь – всюду виден Ее светлый лик. И ни одна молитва не
+                                остается не
+                                услышанной Пресвятой Богородицей.
+                            </p>
+                        </div>
+                        <div class="icon__other-images">
+                            <img src="{% static 'img/assets/image 67.jpg' %}" alt="" class="icon__image">
+                            <img src="{% static 'img/assets/image 68.jpg' %}" alt="" class="icon__image">
+                            <img src="{% static 'img/assets/image 69.jpg' %}" alt="" class="icon__image">
+                        </div>
+                    </li>
+                    <li class="icon list-icons__item">
+                        <div class="icon__main-image_block">
+                            <img src="{% static 'img/assets/image 59.jpg' %}" alt="" class="icon__main-image">
+                        </div>
+                        <div class="icon__text">
+                            <h3 class="icon__title">
+                                Семейные иконы
+                            </h3>
+                            <p class="icon_descr">
+                                С древности на Руси есть особая традиция – иметь семейные иконы, на которых изображены
+                                святые, тезоименитые всем членам семьи. Семейная икона помогает соборной молитве, когда
+                                каждый просит не только за себя, но и за всю семью, родители молятся о детях, дети – о
+                                родителях, супруги – друг о друге... И такая молитва перед семейной иконой помогает
+                                преодолевать любые недоразумения и созидать семью в духе доверия, взаимопонимания,
+                                терпения
+                                и любви.
+                            </p>
+                        </div>
+                        <div class="icon__other-images">
+                            <img src="{% static 'img/assets/image 70.jpg' %}" alt="" class="icon__image">
+                            <img src="{% static 'img/assets/image 71.jpg' %}" alt="" class="icon__image">
+                            <img src="{% static 'img/assets/image 72.jpg' %}" alt="" class="icon__image">
+                        </div>
+                    </li>
+                    <li class="icon list-icons__item">
+                        <div class="icon__main-image_block">
+                            <img src="{% static 'img/assets/image 60.jpg' %}" alt="" class="icon__main-image">
+                        </div>
+                        <div class="icon__text">
+                            <h3 class="icon__title">
+                                Мерные иконы
+                            </h3>
+                            <p class="icon_descr">
+                                Мерная икона — это совершенно особенный образ, икона, написанная для новорожденного
+                                ребенка
+                                как благословение ему на всю жизнь. На иконе изображается святой покровитель ребенка, а
+                                размер иконы — это рост младенца при его рождении, почему икона и называется мерной.
+                            </p>
+                        </div>
+                        <div class="icon__other-images">
+                            <img src="{% static 'img/assets/image 73.jpg' %}" alt="" class="icon__image">
+                            <img src="{% static 'img/assets/image 74.jpg' %}" alt="" class="icon__image">
+                            <img src="{% static 'img/assets/image 75.jpg' %}" alt="" class="icon__image">
+                        </div>
+                    </li>
+                    <li class="icon list-icons__item">
+                        <div class="icon__main-image_block">
+                            <img src="{% static 'img/assets/image 61.jpg' %}" alt="" class="icon__main-image">
+                        </div>
+                                                <div class="icon__text">
+
+                        <h3 class="icon__title">
+                            Иконы праздников
+                        </h3>
+                        <p class="icon_descr">
+                            Иконы праздников обычно заказывают для храмовых иконостасов, а также в храмы, которые
+                            посвящены двунадесятым и великим праздникам. Иконы особенно почитаемых праздников заказывают
+                            христиане и в свои дома.
+                        </p>
+                                                </div>
+                        <div class="icon__other-images">
+                            <img src="{% static 'img/assets/image 76.jpg' %}" alt="" class="icon__image">
+                            <img src="{% static 'img/assets/image 77.jpg' %}" alt="" class="icon__image">
+                            <img src="{% static 'img/assets/image 78.jpg' %}" alt="" class="icon__image">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+{% endblock %}

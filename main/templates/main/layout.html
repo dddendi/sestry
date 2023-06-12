@@ -1,51 +1,56 @@
 {% load static %}
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %} {% endblock %}</title>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">-->
+{% block header %} {% endblock %}
     <link rel="stylesheet" href="{%  static 'main/css/main.css' %}">
 
     <script src="https://kit.fontawesome.com/3af9fe18f6.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header class="main-header">
       <div class="main-header-img" >
-        <img src="{% static 'main/img/images.png' %}" alt="Александро-Невский Ново-Тихвинский женский монастырь">
+        <a href="{% url 'Главная' %}"><img src="{% static 'main/img/naming.png' %}" alt="Александро-Невский Ново-Тихвинский женский монастырь"></a>
       </div>
       <aside>
         <nav class="main-header-nav">
             <ul class="site-navigation">
               <li class="site-navigation-item">
-                <a href="{% url 'main' %}">О монастыре </a>
+                <a href="{% url 'О монастыре' %}">О монастыре </a>
               </li>
               <li class="site-navigation-item">
-                <a href="{% url 'news_home' %}">Мастерские</a>
+                <a href="{% url 'Мастерские' %}">Мастерские</a>
               </li>
               <li class="site-navigation-item">
-                <a href="{% url 'about' %}">Духовник</a>
+                <a href="{% url 'Слово духовника' %}">Слово духовника</a>
               </li>
               <li class="site-navigation-item">
-                <a href="{% url 'about' %}">Беседы матушки</a>
+                <a href="{% url 'Беседы матушки' %}">Беседы матушки</a>
               </li>
               <li class="site-navigation-item">
-                <a href="{% url 'about' %}">Служение ближним</a>
+                <a href="{% url 'Храмы' %}">Храмы</a>
               </li>
               <li class="site-navigation-item">
-                <a href="{% url 'about' %}">Храмы</a>
+                <a href="{% url 'Подворье' %}">Подворье в Меркушино</a>
               </li>
               <li class="site-navigation-item">
-                <a href="{% url 'about' %}">Святыни</a>
+                <a href="{% url 'Главная' %}">Святыни</a>
               </li>
               <li class="site-navigation-item">
-                <a href="{% url 'about' %}">Подворье в Меркушино</a>
+                <a href="{% url 'Соцпроекты' %}">Служение ближним</a>
               </li>
             </ul>
+            <p><input type="search" name="search-line" placeholder="Поиск по сайту">
+            <input type="submit" value="Найти" class="search-line"></p>
         </nav>
+
     </aside>
     </header>
     
@@ -58,9 +63,9 @@
       <div class="footer-wrapper">
         <div class="footer-block">
           <div class="footer-number">
-            <span>телефон для паломниц</span>
+            <span>Телефон для паломниц</span>
             <span>8-912-22-76-151</span>
-            <img src="{% static 'main/img/youmon.svg' %}" width="99" height="21" alt="Оплата">
+            <img src="{% static 'main/img/youmoney.svg' %}" width="99" height="21" alt="Оплата">
           </div>
           <div class="footer-address">
             <span>620144, г. Екатеринбург<br>
@@ -75,24 +80,24 @@
           <span>
             624378, Свердловская область<br>
 Верхотурский район, село Меркушино<br>
-по вопросам паломничества 8-90287-46002
+По вопросам паломничества <br>8-902-87-46-002</br>
           </span>
         </div>
         <img src="{% static 'main/img/line.svg' %}" alt="линия">
         <div class="footer-block">
           <h4>Подворье в честь Всемилостивого Спаса</h4>
           <span>
-            620024, г. Екатеринбург, ул. Бисертская, 12 а
+            620024, г. Екатеринбург, ул. Бисертская 12а
             (район Елизавет)<br>
             тел. (343) 256-89-25
             <span>
               <a href="#">
-                <img src="{% static 'main/img/vk.svg' %}"width="35" height="35" alt="vk">
+                <img src="{% static 'main/img/vk.svg' %}" width="35" height="35" alt="vk">
               </a>
             </span>
             <span>
               <a href="#">
-                <img src="{% static 'main/img/tg.svg' %}"width="35" height="35" alt="tg">
+                <img src="{% static 'main/img/tg.svg' %}" width="35" height="35" alt="tg">
               </a>
             </span>
           </span>

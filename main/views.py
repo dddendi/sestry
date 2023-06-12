@@ -2,13 +2,32 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-def index(request):
-    return render(request, 'main/index.html')
+def main(request):
+    return render(request, 'main/main.html')
 
 
 def about(request):
-    return render(request, 'main/about.html')
+    return render(request, 'main/проМонастырь.html')
 
 
-def contacts(request):
-    return render(request, 'main/contacts.html')
+def masterskie(request):
+    return render(request, 'main/мастерские.html')
+
+
+def duhovnik(request):
+    return render(request, 'main/духовник.html')
+
+
+def besedyM(request):
+    return render(request, 'main/беседыМатушки.html')
+
+
+def temples(request):
+    return render(request, 'main/храмы.html')
+
+
+def podvorie(request):
+    return render(request, 'main/подворье.html')
+
+def socprojects(request):
+    return render(request,'main/соцпроекты.html')

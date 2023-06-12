@@ -1,0 +1,29 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+      {% block title %}Ново-Тихвинский женский монастырь{% endblock %}
+
+    {% block content %}
+        <h1>Мастерские</h1>
+        <ul class="menu-list">
+            <li class="menu-list-item">
+              <a href="{% url 'Иконописная' %}">Иконописная мастерская</a>
+            </li>
+            <li class="menu-list-item">
+              <a href="{% url 'Швейная' %}">Швейная мастерская</a>
+            </li>
+            <li class="menu-list-item">
+              <a href="{% url 'Издательство' %}">Издательство</a>
+            </li>
+            <li class="menu-list-item">
+              <a href="{% url 'Хор' %}">Монастырский хор</a>
+            </li>
+            <li class="menu-list-item">
+                <a href="{% url 'Просфорня' %}">Просфорня</a>
+            </li>
+          </ul>
+          <div class="main-photo">
+            <img src='{% static 'img/assets/image 81.png' %}'>
+            <img src='{% static 'img/assets/image 80.png' %}'>
+          </div>
+    {% endblock %}

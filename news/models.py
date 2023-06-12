@@ -9,7 +9,7 @@ class Article(models.Model):
     anons_text = models.CharField('Анонс-текст', max_length=400)
     full_text = models.TextField('Текст новости')
     images = models.ImageField('Фото к новости', upload_to='static/img/news')
-    date = models.DateTimeField('Дата публикации',default=datetime.now)
+    date = models.DateTimeField('Дата публикации', default=datetime.now)
 
     def __str__(self):
         return self.title

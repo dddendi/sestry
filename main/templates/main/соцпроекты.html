@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+    {% block title %}Ново-Тихвинский женский монастырь{% endblock %}
+
+{% block content %}
+    <main>
+        <h1>Социальные проекты</h1>
+        <section class="main-section">
+            <div class="first-block">
+                <a href="#"><img src="{% static 'img/assets/image 32.png' %}" width="370" height="230" alt="Воскресные школы"></a>
+            </div>
+            <div class="second-block">
+                <a href="#"><img src="{% static 'img/assets/image 33.png' %}" width="370" height="230" alt="Социальная служба"></a>
+            </div>
+            <div class="third-block">
+                <a href="#"><img src="{% static 'img/assets/image 34.png' %}" width="370" height="230" alt="Благотворительная столовая"></a>
+            </div>
+            <div class="video-block">
+                <iframe width="330" height="200" src="https://www.youtube.com/watch?v=1s2xPqghDGk"></iframe>
+            </div>
+        </section>
+    </main>
+  {% endblock %}
