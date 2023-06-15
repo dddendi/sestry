@@ -8,6 +8,7 @@
         <p>{{ art.full_text}}</p>
     </div>
     {% for photo in art.photos.all %}
-    <img src="{{ photo.photo.url }}">
+    <img src="{{ photo.photo.url }}"  style="max-height: 500px;max-width: 500px">
     {% endfor %}
+
 {% endblock %}

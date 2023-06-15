@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}События{% endblock %}
+
+{% block content %}
+    <div class="model-block">
+        <h1>{{ ev.title }}</h1>
+        <p>{{ ev.full_text}}</p>
+    </div>
+    {% for photo in ev.photos.all %}
+    <img src="{{ photo.photo.url }}" style="max-height: 500px;max-width: 500px">
+    {% endfor %}
+{% endblock %}

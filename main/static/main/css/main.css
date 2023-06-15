@@ -18,8 +18,6 @@ html,body{
 
 .main-header{
     width: 100%;
-
-    
 }
 .main-header-img{
     width: 100%;
@@ -81,7 +79,6 @@ main{
 }
 .footer-wrapper > .footer-block{
     padding-top: 10px;
-
 }
 
 .footer-wrapper > .footer-block:not(:first-child){
@@ -96,6 +93,7 @@ main{
 .footer-block > .footer-number {
     display: flex;
     flex-direction: column;
+    width: 210px;
 }
 .footer-block > .footer-address {
 width: 210px;
@@ -112,6 +110,9 @@ width: 210px;
 .flex-row{
     display: flex;
     flex-direction: row;
+}
+.flex-row > div{
+    padding: 0 10px 0;
 }
 .gallery > .gallery-photo{
     width: 50%;
@@ -153,14 +154,26 @@ width: 210px;
     width: 100%;
     background-color: aliceblue;
 }
+.a-news{
+    color: #df074b;
+    text-decoration: none;
+    font-family: Calibri;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
 .more{
     width: 100%;
     height: 250px;
     gap: 10px;
     margin-top: 15px;
+
+}
+.more > .more-events{
+    width: 100%;
+    padding: 12px;
 }
 .more > .more-news{
     width: 40%;
+    padding: 8px;
 }
 
 .more > .more-calendar{
@@ -168,14 +181,29 @@ width: 210px;
 }
 
 .more > .more-block{
-    background-color: gray;
+    background-color: bisque;
+    border: 1px solid black;
 }
 
+.event{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Два столбца равной ширины */
+    grid-template-rows: repeat(2, 1fr); /* Две строки автоматической высоты */
+    grid-gap: 10px; /* Промежуток между элементами */
+    background-color:bisque;
+    border: 1px solid black;
+}
 .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Два столбца равной ширины */
-  grid-template-rows: repeat(2, 48%); /* Две строки автоматической высоты */
-  grid-gap: 10px; /* Промежуток между элементами */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Два столбца равной ширины */
+    grid-template-rows: repeat(2, 48%); /* Две строки автоматической высоты */
+    grid-gap: 10px; /* Промежуток между элементами */
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position-x: 15%;
+    background-position-y: 7%;
+    background-color:bisque;
+    border: 1px solid black;
 }
 
 .item {

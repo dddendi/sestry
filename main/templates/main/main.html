@@ -5,7 +5,7 @@
 {% block content %}
     <style>
   a {
-    color: darkred;
+    color: orangered;
     text-decoration: none;
   }
 </style>
@@ -23,31 +23,183 @@
                     <div>Заказать требы</div>
                 </div>
             </div>
-            <div class="holidays">
-                    Будни и праздники обители
+            <h2 style="margin-top: 20px;">Будни и праздники обители</h2>
+            <div class="more flex-row" style="margin-top: 5px">
+                <div class="more-block event" style="padding: 10px">
+                {% for event in events %}
+                    <a class="a-news"  href="{% url 'event_detail' title=event.title %}"
+                       style="background-image: url('{{ event.first_photo }}'); padding: 5px">
+                        <div class="model-block">
+                            <h3>{{ event.title }}</h3>
+                            <p>{{ event.full_text|truncatechars:100 }}</p>
+                            <span>{{ event.date.date }}</span>
+                        </div>
+                    </a>
+                  {% endfor %}
+                </div>
             </div>
             <div class="conversations flex-row">
                 <div><a href='{% url 'Слово духовника' %}'>Cлово духовника</a></div>
-                <div><a href='{% url 'Беседы матушки' %}'>Беседы о духовной жизни</div>
-                <div><a href='{% url 'Беседы о жизни' %}'>Беседы матушки</div>
+                <div><a href='{% url 'Беседы о жизни' %}'>Беседы о духовной жизни</a></div>
+                <div><a href='{% url 'Беседы матушки' %}'>Беседы матушки</a></div>
             </div>
             <div class="more flex-row">
-                <div class="more-news more-block container" style="background-image: url('/static/img/stubs/21601.png');
-                                                                   background-size: 30%;
-                                                                   background-repeat: no-repeat;
-                                                                   background-position-x: 15%"> Новости и события
+                <div class="more-news more-block container"
+                     style="background-image: url('/static/img/stubs/21601.png')"> <h4>Новости и события</h4>
                   {% for article in articles %}
-                    <a href="{% url 'article_detail' title=article.title %}"
-                       style="background-image: url('{{ article.first_photo }}')">
+                    <a class="a-news" href="{% url 'article_detail' title=article.title %}"
+                       style="background-image: url('{{ article.first_photo }}'); padding: 5px">
                         <div class="model-block">
-                            <h2>{{ article.title }}</h2>
+                            <h3>{{ article.title }}</h3>
                             <p>{{ article.full_text|truncatechars:50 }}</p>
                         </div>
                     </a>
                   {% endfor %}
 
                 </div>
-                <div class="more-calendar more-block">Расписание</div>
+                <div class="more-calendar more-block"><h4>Расписание</h4>
+                    <style>
+                      table {
+                        border-collapse: collapse;
+                        width: 100%;
+                      }
+
+                      th, td {
+                        border: 1px solid black;
+                        padding: 8px;
+                      }
+
+                      th {
+                        background-color: #CCD18F;
+                      }
+
+                      td {
+                        background-color: #EFF7C6;
+                          font-size: large;
+                      }
+                      td:empty {
+                        background-color: #CCD18F;
+                      }
+                    </style>
+                <tr>
+                  <td bgcolor="#635433" align="center" valign="middle" colspan="3">
+                    <table border="0" width="100%" cellspacing="2" cellpadding="4">
+                      <tbody>
+                        <tr>
+                          <th bgcolor="#CCD18F" width="14%">ПН</th>
+                          <th bgcolor="#CCD18F" width="14%">ВТ</th>
+                          <th bgcolor="#CCD18F" width="14%">СР</th>
+                          <th bgcolor="#CCD18F" width="14%">ЧТ</th>
+                          <th bgcolor="#CCD18F" width="14%">ПТ</th>
+                          <th bgcolor="#CCD18F" width="14%">СБ</th>
+                          <th bgcolor="#CCD18F" width="14%">ВС</th>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#CCD18F" colspan="3"></td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">1</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">2</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">3</a>
+                          </td>
+                          <td bgcolor="#D8E2A1">
+                            <a href="#" title="День Святой Троицы. Пятидесятница">4</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#D8E2A1">
+                            <a href="#" title="День Святого Духа">5</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">6</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">7</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">8</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">9</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">10</a>
+                          </td>
+                          <td bgcolor="#D8E2A1">
+                            <a href="#" title="Неделя 1-я по Пятидесятнице, всех святых">11</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">12</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">13</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">14</a>
+                          </td>
+                          <td bgcolor="FCFEEE">
+                            <a href="#">15</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">16</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">17</a>
+                          </td>
+                          <td bgcolor="#D8E2A1">
+                            <a href="#" title="Неделя 2-я по Пятидесятнице, Всех русских святых.">18</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">19</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">20</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">21</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">22</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">23</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">24</a>
+                          </td>
+                          <td bgcolor="#D8E2A1">
+                            <a href="#" title="Неделя 3-я по Пятидесятнице («светильник тела есть око…»).">25</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">26</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">27</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">28</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">29</a>
+                          </td>
+                          <td bgcolor="#EFF7C6">
+                            <a href="#">30</a>
+                          </td>
+                          <td bgcolor="#CCD18F" colspan="2"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr></div>
             </div>
             <div class="more-2 flex-row ">
                 <div class="more-2-block"><a href="{% url 'Просфорня' %}">Просфорня</a></div>
@@ -62,3 +214,5 @@
 
     </div>
 {% endblock %}
+
+
