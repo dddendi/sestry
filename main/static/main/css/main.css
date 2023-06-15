@@ -10,10 +10,12 @@
 html,body{
     width: 100vw;
     min-height: 100vh; /* на айфонах будет баг*/
-    background: bisque;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    min-width: 320px;
+    font-family: 'Roboto', sans-serif ;
+    background: bisque !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
 }
 
 .main-header{

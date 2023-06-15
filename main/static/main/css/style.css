@@ -4,6 +4,7 @@
 }
 
 @font-face {
+    
     font-family: 'Roboto';
     font-display: swap;
     font-weight: 400;
@@ -39,7 +40,7 @@ img {
 
 body {
     min-width: 320px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif ;
     background: var(--white);
 }
 
