@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'news',
     'masterskie',
     'easy_thumbnails',
+    'events',
 ]
 
 MIDDLEWARE = [

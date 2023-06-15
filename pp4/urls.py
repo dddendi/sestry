@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('main.urls')),
     path('Новости/', include('news.urls')),
     path('Мастерские/',include('masterskie.urls')),
+    path('События/',include('events.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
   + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

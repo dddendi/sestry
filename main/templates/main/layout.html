@@ -7,8 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %} {% endblock %}</title>
 
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">-->
 {% block header %} {% endblock %}
     <link rel="stylesheet" href="{%  static 'main/css/main.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
@@ -71,22 +69,18 @@
       <div class="footer-wrapper">
         <div class="footer-block">
           <div class="footer-number">
-            <span>Телефон для паломниц</span>
-            <span>8-912-22-76-151</span>
-            <img src="{% static 'main/img/youmoney.svg' %}" width="99" height="21" alt="Оплата">
-          </div>
-          <div class="footer-address">
-            <span>620144, г. Екатеринбург<br>
+            <h4>Контакты для паломников</h4>
+              <span>620144, г. Екатеринбург<br>
               ул. Зеленая Роща, 1<br>
               тел. (343) 257-50-95,<br>
-              257-06-42</span>
+              257-06-42,<br>8-912-22-76-151</span>
           </div>
         </div>
         <img src="{% static 'main/img/line.svg' %}" alt="линия">
         <div class="footer-block">
           <h4>Свято-Симеоновское подворье</h4>
           <span>
-            624378, Свердловская область<br>
+            624378, Свердловская область,<br>
 Верхотурский район, село Меркушино<br>
 По вопросам паломничества <br>8-902-87-46-002</br>
           </span>
@@ -95,17 +89,22 @@
         <div class="footer-block">
           <h4>Подворье в честь Всемилостивого Спаса</h4>
           <span>
-            620024, г. Екатеринбург, ул. Бисертская 12а
+            620024, г. Екатеринбург,<br> ул. Бисертская 12а
             (район Елизавет)<br>
             тел. (343) 256-89-25
             <span>
-              <a href="#">
+              <a href="https://vk.com/novo_tihvin" target="blank">
                 <img src="{% static 'main/img/vk.svg' %}" width="35" height="35" alt="vk">
               </a>
             </span>
             <span>
-              <a href="#">
+              <a href="https://t.me/novo_tihvinskij_monastir" target="blank">
                 <img src="{% static 'main/img/tg.svg' %}" width="35" height="35" alt="tg">
+              </a>
+            </span>
+              <span>
+              <a href="">
+                <img src="{% static 'main/img/youmoney.svg' %}" width="120" height="34" alt="Оплата">
               </a>
             </span>
           </span>
