@@ -5,5 +5,5 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', views.news_home, name='news_home'),
+    path('<str:title>/', views.article_detail, name='article_detail'),
 ]

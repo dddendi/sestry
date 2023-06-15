@@ -3,13 +3,19 @@
 {% block title %}Главная{% endblock %}
 
 {% block content %}
+    <style>
+  a {
+    color: darkred;
+    text-decoration: none;
+  }
+</style>
     <div class="main-page">
         <div class="main-page-wrapper">
             <div class="first-block flex-row">
                 <div>
-                    <div>Иконописная мастерская</div>
-                    <div>Издательство</div>
-                    <div>Швейная мастерская</div>
+                    <div><a href='{% url 'Иконописная' %}'>Иконописная мастерская</a></div>
+                    <div><a href='{% url 'Издательство' %}'>Издательство</a></div>
+                    <div><a href='{% url 'Швейная' %}'>Швейная мастерская</a></div>
                 </div>
                 <div>
                     <div>Пожертвовать</div>
@@ -21,18 +27,31 @@
                     Будни и праздники обители
             </div>
             <div class="conversations flex-row">
-                <div>Cлово духовника</div>
-                <div>Беседы о духовной жизни</div>
-                <div>Беседы матушки</div>
-
+                <div><a href='{% url 'Слово духовника' %}'>Cлово духовника</a></div>
+                <div><a href='{% url 'Беседы матушки' %}'>Беседы о духовной жизни</div>
+                <div><a href='{% url 'Беседы о жизни' %}'>Беседы матушки</div>
             </div>
             <div class="more flex-row">
-                <div class="more-news more-block">Новости и события</div>
+                <div class="more-news more-block container" style="background-image: url('/static/img/stubs/21601.png');
+                                                                   background-size: 30%;
+                                                                   background-repeat: no-repeat;
+                                                                   background-position-x: 15%"> Новости и события
+                  {% for article in articles %}
+                    <a href="{% url 'article_detail' title=article.title %}"
+                       style="background-image: url('{{ article.first_photo }}')">
+                        <div class="model-block">
+                            <h2>{{ article.title }}</h2>
+                            <p>{{ article.full_text|truncatechars:50 }}</p>
+                        </div>
+                    </a>
+                  {% endfor %}
+
+                </div>
                 <div class="more-calendar more-block">Расписание</div>
             </div>
             <div class="more-2 flex-row ">
-                <div class="more-2-block">Просфорная</div>
-                <div class="more-2-block">Монастырский хор</div>
+                <div class="more-2-block"><a href="{% url 'Просфорня' %}">Просфорня</a></div>
+                <div class="more-2-block"><a href="{% url 'Хор' %}">Монастырский хор</a></div>
 
             </div>
             <div class="gallery flex-row">

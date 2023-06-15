@@ -5,10 +5,7 @@ from datetime import datetime
 
 class Article(models.Model):
     title = models.CharField('Название', max_length=50)
-    anons_icon = models.ImageField('Анонс-фото', upload_to='static/img/news')
-    anons_text = models.CharField('Анонс-текст', max_length=400)
     full_text = models.TextField('Текст новости')
-    images = models.ImageField('Фото к новости', upload_to='static/img/news')
     date = models.DateTimeField('Дата публикации', default=datetime.now)
 
     def __str__(self):
@@ -17,3 +14,11 @@ class Article(models.Model):
     class Meta:
         verbose_name_plural = 'Новости'
         verbose_name = 'Новость'
+        ordering = ['date']
+
+
+class ShowPhoto(models.Model):
+    show = models.ForeignKey(
+        Article, on_delete=models.CASCADE, related_name="photos"
+    )
+    photo = models.ImageField(upload_to=f'static/img/news/%Y%m%d%H%M%S')

@@ -170,3 +170,37 @@ width: 210px;
 .more > .more-block{
     background-color: gray;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Два столбца равной ширины */
+  grid-template-rows: repeat(2, 48%); /* Две строки автоматической высоты */
+  grid-gap: 10px; /* Промежуток между элементами */
+}
+
+.item {
+  background-color: #f0f0f0; /* Цвет фона элемента */
+  padding: 10px; /* Внутренний отступ элемента */
+}
+
+.item-image {
+  width: 100%; /* Ширина картинки занимает всю доступную ширину */
+  height: 200px; /* Фиксированная высота картинки */
+  overflow: hidden; /* Обрезаем картинку, если она превышает высоту */
+}
+
+.item-image img {
+  width: 100%; /* Масштабируем картинку по ширине контейнера */
+  height: 100%; /* Масштабируем картинку по высоте контейнера */
+  object-fit: cover; /* Заполняем контейнер картинкой, сохраняя пропорции */
+}
+
+.item-title {
+  font-size: 18px; /* Размер заголовка */
+  margin-top: 10px; /* Внешний отступ сверху */
+}
+
+.item-text {
+  font-size: 14px; /* Размер текста */
+  margin-top: 5px; /* Внешний отступ сверху */
+}

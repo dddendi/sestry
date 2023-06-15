@@ -3,5 +3,11 @@
 {% block title %}Новости{% endblock %}
 
 {% block content %}
-    <h1>Новости</h1>
+    <div class="model-block">
+        <h1>{{ art.title }}</h1>
+        <p>{{ art.full_text}}</p>
+    </div>
+    {% for photo in art.photos.all %}
+    <img src="{{ photo.photo.url }}">
+    {% endfor %}
 {% endblock %}

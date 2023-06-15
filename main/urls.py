@@ -12,5 +12,6 @@ urlpatterns = [
     path('Беседы матушки/', views.besedyM, name='Беседы матушки'),
     path('Храмы/', views.temples, name="Храмы"),
     path('Подворье в меркушино/', views.podvorie, name='Подворье'),
-    path('Служение ближним/',views.socprojects,name='Соцпроекты')
+    path('Служение ближним/',views.socprojects,name='Соцпроекты'),
+    path('Беседы о жизни',views.besedyO,name='Беседы о жизни'),
 ]

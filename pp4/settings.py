@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'main',
     'news',
     'masterskie',
+    'easy_thumbnails',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,9 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+THUMBNAIL_ALIASES = {
+    "": {
+        "small": {"size": (150, 150)}
+    },
+}
