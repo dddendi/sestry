@@ -9,8 +9,6 @@
     text-decoration: none;
   }
 </style>
-    <div class="main-page">
-        <div class="main-page-wrapper">
             <div class="first-block flex-row">
                 <div>
                     <div><a href='{% url 'Иконописная' %}'>Иконописная мастерская</a></div>
@@ -44,7 +42,7 @@
                 <div><a href='{% url 'Беседы матушки' %}'>Беседы матушки</a></div>
             </div>
             <div class="more flex-row">
-                <div class="more-news more-block container"
+                <div class="more-news more-block container-v2"
                      style="background-image: url('/static/img/stubs/21601.png')"> <h4>Новости и события</h4>
                   {% for article in articles %}
                     <a class="a-news" href="{% url 'article_detail' title=article.title %}"
@@ -207,12 +205,8 @@
 
             </div>
             <div class="gallery flex-row">
-                <div class="gallery-photo">Галерея фото</div>
+                <a class="gallery-photo" href="{% url 'Галерея'%}">Галерея фото</a>
                 <div class="gallery-postcards">Галерея открыток</div>
             </div>
-        </div>
-
     </div>
 {% endblock %}
-
-

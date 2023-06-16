@@ -1,3 +1,4 @@
+
 {% load static %}
 <!doctype html>
 <html lang="ru">
@@ -6,8 +7,11 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %} {% endblock %}</title>
+
 {% block header %} {% endblock %}
     <link rel="stylesheet" href="{%  static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/normalize.css' %}">
 
     <script src="https://kit.fontawesome.com/3af9fe18f6.js" crossorigin="anonymous"></script>
 
@@ -39,23 +43,23 @@
                 <a href="{% url 'Подворье' %}">Подворье в Меркушино</a>
               </li>
               <li class="site-navigation-item">
-                <a href="{% url 'Главная' %}">Святыни</a>
-              </li>
-              <li class="site-navigation-item">
                 <a href="{% url 'Соцпроекты' %}">Служение ближним</a>
               </li>
             </ul>
             <p><input type="search" name="search-line" placeholder="Поиск по сайту">
             <input type="submit" value="Найти" class="search-line"></p>
         </nav>
-
     </aside>
     </header>
-    
+
 
     <main>
-        {% block content %}
-        {% endblock %}
+      <div class="main-page">
+        <div class="main-page-wrapper">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
     </main>
     <footer class="main-footer">
       <div class="footer-wrapper">

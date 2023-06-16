@@ -1,0 +1,33 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Галерея{% endblock %}
+
+{% block content %}
+    <style>
+    .photo-container {
+    display: flex;
+    }
+
+    .photo-container img {
+        max-height: 500px;
+        max-width: 500px; /* Задайте ширину и высоту по своему усмотрению */
+        min-height: 120px;
+        min-width: 80px;
+        object-fit: contain; /* Подгонять изображение под размер контейнера */
+        margin-right: 10px; /* Отступ между изображениями */
+    }
+    .enlarged {
+      transform: scale(2);
+    }
+    </style>
+    <script>
+    function enlargePhoto(photo) {
+      photo.classList.toggle("enlarged");
+    }
+    </script>
+    <div class="photo-container">
+        {% for photo in photos %}
+        <img src="/{{ photo.image }}"  alt = '{{ photo.alt }}' style="max-height: 500px;max-width: 500px" onclick="enlargePhoto(this)">
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from news.models import *
 from events.models import *
+from gallery.models import *
 from django.http import HttpResponse
 
 

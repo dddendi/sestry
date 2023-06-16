@@ -1,3 +1,4 @@
+
 *, *::after, *::before {
     margin: 0;
     padding: 0;
@@ -10,10 +11,12 @@
 html,body{
     width: 100vw;
     min-height: 100vh; /* на айфонах будет баг*/
-    background: bisque;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    min-width: 320px;
+    font-family: 'Roboto', sans-serif ;
+    background: bisque !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
 }
 
 .main-header{
@@ -83,12 +86,12 @@ main{
 
 .footer-wrapper > .footer-block:not(:first-child){
     padding-left: 10px;
-    
+
 }
 .footer-wrapper > .footer-block:first-child{
     display: flex;
     flex-direction: row;
-    
+
 }
 .footer-block > .footer-number {
     display: flex;
@@ -194,6 +197,18 @@ width: 210px;
     border: 1px solid black;
 }
 .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Два столбца равной ширины */
+    grid-template-rows: repeat(2, 48%); /* Две строки автоматической высоты */
+    grid-gap: 10px; /* Промежуток между элементами */
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position-x: 15%;
+    background-position-y: 7%;
+    background-color:bisque;
+    border: 1px solid black;
+}
+.container-v2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Два столбца равной ширины */
     grid-template-rows: repeat(2, 48%); /* Две строки автоматической высоты */

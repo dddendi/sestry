@@ -4,6 +4,7 @@
 }
 
 @font-face {
+
     font-family: 'Roboto';
     font-display: swap;
     font-weight: 400;
@@ -39,7 +40,7 @@ img {
 
 body {
     min-width: 320px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif ;
     background: var(--white);
 }
 
@@ -63,23 +64,30 @@ button {
 }
 
 .container {
+    display: block !important;
     max-width: 1170px;
     width: 100%;
-    padding: 0 65px;
-    margin: 0 auto;
+    /* padding: 0 65px; */
+    /* margin: 0 auto; */
 }
 
 .title {
     padding: 25px 0;
     font-size: 40px;
-    margin: 0 0 22px;
+    width: 100%;
+    /* margin: 0 0 22px; */
     border-bottom: 1px solid #000;
 }
 
+.list{
+    width: 100%;
+}
 .item {
+    width: 100%;
     display: flex;
     gap: 25px;
     margin: 0 0 25px;
+    background-color: bisque;
 }
 
 .item__title {
